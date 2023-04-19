@@ -81,28 +81,7 @@ body{
 .butt_no_active{
     background-color: #999999;
 }
-/* .butt:disabled {
-    background-color: #999999;
-    
-} */
 
-/* .pulses{
-   
-transform: scale(1);
-animation: pulse 2s ease-in-out infinite;
-}
-
-@keyframes pulse {
-from {
-  transform: scale(1);
-}
-50% {
-  transform: scale(.85);
-}
-to {
-  transform: scale(1);
-}
-} */
 
 
 .check_boxx {
@@ -120,9 +99,30 @@ to {
     width: 18px;
     margin-right: 16px;
 }
-
+label input {
+    display: none;/* <--скрываем дефолтный чекбокс */
+  }
+  label span {/* <-- стилизируем новый */
+    height: 15px;
+    width: 15px;
+    border: 1px solid gray;
+    display: inline-block;
+    position: relative;
+    background-color:#FFF;
+    border-radius:2px;
+    padding:3px;
+    margin-right: 10px;
+  }
+  [type=checkbox]:checked + span:before {/* <-- ставим иконку, когда чекбокс включен  */
+    content: '\2714';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    font-size:23px;
+    color:#00AD9E;
+  }
 .pulse {
-    border-radius: 360px;
+    border-radius: 5px;
     box-shadow: 0 0 0 rgba(47, 204, 44, 0.4);
     animation: pulse 2s infinite;
   }
