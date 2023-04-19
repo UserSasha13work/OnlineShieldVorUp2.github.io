@@ -1,91 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../assets_files/style.css">
     <title>Are you safe or not?</title>
 </head>
+
 <body>
     <div class="div-main">
         <div class="block_1">
-            <img src="../img/img.png" alt="" >
+            <img src="../img/img.png" alt="">
         </div>
         <div class="block_2">
             <h1>Are you safe or not?</h1>
-            <p>Take the 1-min quiz to find out that your <br> internet connection safe and no one is <br> watching you!</p>
-           
+            <p>Take the 1-min quiz to find out that your <br> internet connection safe and no one is <br> watching you!
+            </p>
+
             <button class="butt">Continue</button>
 
             <div class="check_boxx">
                 <span class="check_boxx_in"><input type="checkbox" class='inp' checked>
                     By continuing, I agree with:</span>
-                
+
             </div>
-        
             <!-- PP -->
             <div class="pp">
-
-
-                <a href="../pp/Term.html">Terms of service </a>
+                <button type="button" class="btn_m" data-modal="modal_1">Terms of service</button>
+                
                 <div class="cher"></div>
-                <a href="../pp/Privacy_Policy.html">Privacy Policy</a>
+                <button type="button" class="btn_m" data-modal="modal_2">Privacy Policy</button>
+               
             </div>
 
         </div>
-        
-       
-          
-            
-       
-        
-   
-
 
     </div>
+    <div class="fade"></div>
+<!--Подложка модального окна-->
+
+<div class="modal" id="modal_1">
+  <span class="close">&times;</span>
+    <iframe src="../pp/Term.html" frameborder="0" style="width: 100%; height: 550px;"></iframe>
+
+</div>
+
+<div class="modal" id="modal_2">
+  <span class="close">&times;</span>
+  <iframe src="../pp/PP.html" frameborder="0" style="width: 100%; height: 550px;"></iframe>
+</div>
 
 
-
-        <script src="https://code.jquery.com/jquery-3.6.1.js"
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-   
-    <script>
-        let inp = document.querySelector('.inp'); //находим чекбокс
-        let check_boxx = document.querySelector('.check_boxx_in'); 
-        
-        let btn = document.querySelector('.butt'); //находим кнопку
-        let stat_butt="active";
+    <script src="../assets_files/script.js"></script>
 
-
-        
-
-
-        // console.log(btn.getAttribute('disabled'));
-        btn.addEventListener('click', (event)=>{
-            
-            if (stat_butt=="active"){
-                console.log("yes");
-                location.href='./questions.html';
-            }
-            else{
-                check_boxx.classList.add("pulse");
-
-            }
-        });
-        btn.disabled = false;
-        inp.addEventListener("change", (event) => {
-  if (event.target.checked) { //если чекбокс эктив
-
-    stat_butt="active";
-    btn.classList.remove("butt_no_active");
-    check_boxx.classList.remove("pulse");
-  } else {
-    stat_butt="no_active";
-    btn.classList.add("butt_no_active");
-    
-  }});
-    </script>
 </body>
+
 </html>
