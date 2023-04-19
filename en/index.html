@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets_files/style.css">
+    <title>Are you safe or not?</title>
+</head>
+<body>
+    <div class="div-main">
+        <div class="block_1">
+            <img src="../img/img.png" alt="" >
+        </div>
+        <div class="block_2">
+            <h1>Are you safe or not?</h1>
+            <p>Take the 1-min quiz to find out that your <br> internet connection safe and no one is <br> watching you!</p>
+           
+            <button class="butt" onclick="location.href='./questions.html';">Continue</button>
+            <div class="check_boxx">
+                <input type="checkbox" class='inp' checked>
+                By continuing, I agree with:
+            </div>
+        
+            <!-- PP -->
+            <div class="pp">
+
+
+                <a href="../pp/Term.html">Terms of service </a>
+                <div class="cher"></div>
+                <a href="../pp/Privacy_Policy.html">Privacy Policy</a>
+            </div>
+
+        </div>
+        
+       
+          
+            
+       
+        
+   
+
+
+    </div>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+   
+    <script>
+        let inp = document.querySelector('.inp'); //находим чекбокс
+        let btn = document.querySelector('.butt'); //находим кнопку
+        btn.disabled = false;
+        inp.addEventListener("change", (event) => {
+  if (event.target.checked) { //если чекбокс эктив
+    btn.disabled = false; //значит убираем дисэйблэд с кнопки
+  } else {
+    btn.disabled = true;
+  }});
+    </script>
+</body>
+</html>

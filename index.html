@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>language_selection</title>
+</head>
+<body>
+    
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            const params = new Proxy(new URLSearchParams(window.location.search), {
+              get: (searchParams, prop) => searchParams.get(prop),
+            });
+            
+            let userLang = navigator.language || navigator.userLanguage;
+
+            console.log(userLang);
+            window.location.href="./en/index.html";
+
+            //ПЕРЕХОД ПО ЯЗЫКУ
+            
+            // if (userLang == "ru") {
+            //     window.location.href="./ru/index.html";
+            // } else{
+            //     window.location.href="./en/index.html";
+            // }   
+
+            // Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
+            // let value = params.some_key; // "some_value"
+
+            var mediasource = params.mediasource;
+            var ad_campaign_id = params.ad_campaign_id;
+            var source = params.source;
+
+            if (mediasource) {
+              $.cookie('pid', mediasource, { expires: 1 });
+            }
+
+            if (ad_campaign_id) {
+              $.cookie('c', ad_campaign_id, { expires: 1 });
+            }
+
+            if (source) {
+              $.cookie('af_siteid', source, { expires: 1 });
+            }
+        });
+    </script>
+</body>
+</html>
