@@ -78,15 +78,16 @@ body{
         cursor: pointer;
     
 }
-.butt:disabled {
+.butt_no_active{
+    background-color: #999999;
+}
+/* .butt:disabled {
     background-color: #999999;
     
-}
+} */
 
-.butt:disabled:active+.check_boxx{
-
-    
-
+/* .pulses{
+   
 transform: scale(1);
 animation: pulse 2s ease-in-out infinite;
 }
@@ -101,7 +102,7 @@ from {
 to {
   transform: scale(1);
 }
-}
+} */
 
 
 .check_boxx {
@@ -120,3 +121,25 @@ to {
     margin-right: 16px;
 }
 
+.pulse {
+    border-radius: 360px;
+    box-shadow: 0 0 0 rgba(47, 204, 44, 0.4);
+    animation: pulse 2s infinite;
+  }
+
+  
+
+  @keyframes pulse {
+    0% {
+      
+      box-shadow: 0 0 0 0 #ff3e3e;
+    }
+    70% {
+       
+        box-shadow: 0 0 0 20px rgba(204,169,44, 0);
+    }
+    100% {
+       
+        box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    }
+  }

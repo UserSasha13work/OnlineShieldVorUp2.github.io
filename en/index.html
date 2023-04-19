@@ -17,10 +17,12 @@
             <h1>Are you safe or not?</h1>
             <p>Take the 1-min quiz to find out that your <br> internet connection safe and no one is <br> watching you!</p>
            
-            <button class="butt" onclick="location.href='./questions.html';">Continue</button>
+            <button class="butt">Continue</button>
+
             <div class="check_boxx">
-                <input type="checkbox" class='inp' checked>
-                By continuing, I agree with:
+                <span class="check_boxx_in"><input type="checkbox" class='inp' checked>
+                    By continuing, I agree with:</span>
+                
             </div>
         
             <!-- PP -->
@@ -51,13 +53,38 @@
    
     <script>
         let inp = document.querySelector('.inp'); //находим чекбокс
+        let check_boxx = document.querySelector('.check_boxx_in'); 
+        
         let btn = document.querySelector('.butt'); //находим кнопку
+        let stat_butt="active";
+
+
+        
+
+
+        // console.log(btn.getAttribute('disabled'));
+        btn.addEventListener('click', (event)=>{
+            
+            if (stat_butt=="active"){
+                console.log("yes");
+                location.href='./questions.html';
+            }
+            else{
+                check_boxx.classList.add("pulse");
+
+            }
+        });
         btn.disabled = false;
         inp.addEventListener("change", (event) => {
   if (event.target.checked) { //если чекбокс эктив
-    btn.disabled = false; //значит убираем дисэйблэд с кнопки
+
+    stat_butt="active";
+    btn.classList.remove("butt_no_active");
+    check_boxx.classList.remove("pulse");
   } else {
-    btn.disabled = true;
+    stat_butt="no_active";
+    btn.classList.add("butt_no_active");
+    
   }});
     </script>
 </body>
