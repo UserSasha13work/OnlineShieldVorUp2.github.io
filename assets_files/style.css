@@ -83,7 +83,7 @@ body{
     
 }
 
-.butt:disabled:hover+.check_boxx{
+.butt:disabled:active+.check_boxx{
 
     
 
