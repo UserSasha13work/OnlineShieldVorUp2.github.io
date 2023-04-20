@@ -228,7 +228,9 @@ body{
 
 
   /* Questions.html */
-
+  /* .step .close{
+    background: red;
+  } */
 
   #contentwrapper {
     padding-top: 140px;

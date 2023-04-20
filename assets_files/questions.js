@@ -95,7 +95,7 @@ $('.btn_m').click(function() {
     $('#' + modal).addClass('active');
   });
 
-  $('.close').click(function() {
+  $('.butt').click(function() {
     $('.fade').fadeOut(500);
     $('.modal').removeClass('active');
   });
@@ -124,6 +124,7 @@ function sendForm(email) {
 $.cookie('email', email, { expires: 1 });
 
 setTimeout(function() {
+
 window.location.href = "./land.html"
 },1000)
 }
@@ -145,7 +146,5 @@ return false;
 }
 });
 
-$(document).on('click', '.butt', function() {
-    location.href='./land.html';
-});
+
 

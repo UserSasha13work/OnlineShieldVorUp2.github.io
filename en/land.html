@@ -11,9 +11,7 @@
 </head>
 
 <body style="background: #F5F5F5;">
-<style>
 
-</style>
     <div class="timer_line">
         <h2>Reserved price for:
         </h2>
@@ -30,7 +28,12 @@
     </div>
 
     <div class="container">
-
+        <div class="email">
+            <img src="../img/user.svg" alt="">
+            <div id="email">User@mail.com</div>
+            
+            
+        </div>
 
         <h1 class="tittle">
             <img src="../img/logo.png" alt="" >
@@ -573,6 +576,9 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js"></script>
 
 <script>
+    $('#email').html($.cookie('email'));
+
+    
     var $page = $('html, body');
 $('a[href*="#"]').click(function() {
     $page.animate({

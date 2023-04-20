@@ -17,7 +17,6 @@ btn.addEventListener('click', (event)=>{
     }
     else{
         inp.classList.add("pulse");
-
     }
 });
 

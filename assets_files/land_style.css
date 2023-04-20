@@ -336,6 +336,22 @@ justify-content: center;
                     background: none;
                     color: #25CEBF;
 }
+
+
+
+
+.email{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.email img{
+    width: 20px;
+    margin-right: 8px;
+}
+
  /* Адаптация */
 
  @media (max-width:480px) {
