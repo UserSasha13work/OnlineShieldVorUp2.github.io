@@ -96,8 +96,10 @@ body{
     font-size: 20px;
 }
 .check_boxx_in{
+    font-size: 16px;
     display: flex;
     align-items: center;
+    font-weight: 600;
 }
 .inp{
     width: 18px;
@@ -180,7 +182,7 @@ body{
     -webkit-transform: translate(-50%, 0%);
     -ms-transform: translate(-50%, 0%);
     transform: translate(-50%, 0%);
-    background: #fff;
+    background: #F5F5F5;
     max-width: 1080px;
     width: 90%;
     height: 550px;
@@ -315,15 +317,17 @@ body{
     color: #00AD9E;
     font-size: 17px;
     font-weight: 600;
+    cursor: pointer;
 }
 .answer-btn_yes{
-    width: 100px;
+    width: 110px;
 }
 .answer-btn_no{
-    width: 180px;
+    width: 200px;
 }
 .answer-btn_style:active{
-    
+    background: #00AD9E;
+    color: #fff;
 }
 
 .questions_box img.load {
@@ -338,7 +342,7 @@ body{
     line-height: 100%;
     height: 105px;
     font-weight: 600;
-    font-size: 34px;
+    font-size: 24px;
     color: black;
 
 }
@@ -412,3 +416,58 @@ h3{
     height: 300px;
     background: url("../img/first.png");
 }
+
+/* Dob Modal */
+.dob_body{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 100%;
+}
+
+.dob_body img{
+    width: 200px;
+}
+.dob_text{
+    width: 100%;
+
+}
+
+.fact{
+    font-size: 18px;
+    color: #FF4040;
+    font-weight: 600;
+    display: flex;
+    align-content: flex-start;
+    align-items: baseline;
+}
+
+.fact img{
+    width: 20px;
+}
+.fact span{
+   text-align: left;
+   margin-left: 10px;
+}
+.resh{
+    font-size: 18px;
+    color:#00AD9E;
+    font-weight: 600;
+    display: flex;
+    align-items: flex-start;
+    
+    margin-bottom: 16px;
+}
+
+.resh img{
+    width: 70px;
+}
+.resh span{
+   text-align: left;
+   margin-left: 10px;
+}
+
+
